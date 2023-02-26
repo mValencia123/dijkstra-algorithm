@@ -1,0 +1,91 @@
+<html>
+    <style>
+        .contenedor{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .grafo{
+            display: block;
+            width: 45%;
+        }
+
+        .ruta{
+            display: block;
+            width: 45%;
+        }
+
+        .grafo-imagen{
+            width: 100%;
+        }
+
+        textarea{
+            width: 100%;
+            height: 500px;
+        }
+
+        .carrito-imagen{
+            width: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: left 3s, top 3s;
+
+        }
+
+        .button{
+            width: 70%;
+            display: block;
+            margin: auto;
+            margin-top: 15px;
+            height: 40px;
+            border: solid 1px black;
+            border-radius: 20px;
+            background-color: forestgreen;
+            color: wheat;
+        }
+
+        .filtro{
+            width: 100%;
+            align-content: center;
+        }
+    </style>
+    <body>
+        <div class="contenedor">
+            <div class="grafo">
+                <div class="carrito">
+                    <img src="../static/carrito.png" class="carrito-imagen" id="carrito-imagen">
+                </div>
+                <img src="../static/grafo.png" class="grafo-imagen">
+            </div>
+            <div class="ruta">
+                <textarea id="area-ruta"></textarea>
+            </div>
+        </div>
+        <div class="filtro">
+            <label>Nodo Origen:</label>
+            <select id="origen">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <label>Nodo Origen:</label>
+            <select id="destino">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+        </div>
+        <button id="button-seleccionar" class="button" >Seleccionar Datos</button>
+        <button id="button-iniciar" class="button">Iniciar</button>
+        <button id="button-reiniciar" class="button">Reiniciar</button>
+        <script src="../modelo/Node.js"></script>
+        <script src="../main.js"></script>
+    </body>
+</html>
